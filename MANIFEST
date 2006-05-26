@@ -3,7 +3,12 @@ Changes
 INSTALL
 lib/Tie/RRD.pm
 LICENSE
+Makefile.PL
 MANIFEST			This list of files
-NOTICE
-TODO
 META.yml
+NOTICE
+README
+t/10pod.t
+t/11pod_coverage.t
+t/20compile.t
+TODO

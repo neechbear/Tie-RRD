@@ -1,6 +1,6 @@
 ############################################################
 #
-#   $Id: Bot.pm 487 2006-05-22 22:03:16Z nicolaw $
+#   $Id$
 #   Tie::RRD - Minimal tied interface to RRD files
 #
 #   Copyright 2006 Nicola Worthington
@@ -23,13 +23,52 @@ package Tie::RRD;
 # vim:ts=4:sw=4:tw=78
 
 use strict;
-use Exporter;
+use RRD::Simple qw();
 use Carp qw(croak carp);
 
 use vars qw($VERSION $DEBUG);
 
 $VERSION = '0.01' || sprintf('%d', q$Revision$ =~ /(\d+)/g);
 $DEBUG = $ENV{DEBUG} ? 1 : 0;
+
+sub TIEHASH {
+	my $class = shift;
+	my $self = {};
+	bless $self, $class;
+	return $self;
+}
+
+sub FETCH {
+	my $self = shift;
+}
+
+sub STORE {
+	my $self = shift;
+}
+
+sub UNTIE {
+}
+
+sub DESTROY {
+}
+
+sub DELETE {
+	my $self = shift;
+}
+
+sub EXISTS {
+	my $self = shift;
+}
+
+sub FIRSTKEY {
+	my $self = shift;
+}
+
+sub NEXTKEY {
+}
+
+sub SCALAR {
+}
 
 sub TRACE {
 	return unless $DEBUG;
@@ -65,7 +104,7 @@ L<RRD::Simple>, L<RRDTool::OO>
 
 =head1 VERSION
 
-$Id: Bot.pm 487 2006-05-22 22:03:16Z nicolaw $
+$Id$
 
 =head1 AUTHOR
 
