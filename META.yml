@@ -1,0 +1,21 @@
+---
+name: Tie-RRD
+version: 0.01
+author:
+  - Nicola Worthington <nicolaw@cpan.org>
+abstract: Minimal tied interface to RRD files
+license: open_source
+requires:
+  Carp: 0
+  RRD::Simple: 1.31
+recommends:
+  RRD::Simple: 1.33
+  Test: 0
+  Test::More: 0
+  Test::Pod: 0
+  Test::Pod::Coverage: 0
+provides:
+  Tie::RRD:
+    file: lib/Tie/RRD.pm
+    version: 0.01
+generated_by: Module::Build version 0.2611
